@@ -8,8 +8,8 @@ function formReducer(state, event) {
 			name: '',
 			email: '',
 			password: '',
-			occupation: '',
-			state: '',
+			occupation: 'default',
+			state: 'default',
 		};
 	}
 	return {
@@ -93,19 +93,32 @@ export default function Form() {
 			Object.entries(formData).length !== 5
 		) {
 			return (
-				<Button type="submit" disabled mt="40px">
+				<Button type="submit" disabled mt="40px" bg="#71785f" color="#27292d">
 					Submit
 				</Button>
 			);
 		} else if (submitting && hasError !== undefined) {
 			return (
-				<Button disabled isLoading loadingText="Submitting..." mt="40px">
+				<Button
+					disabled
+					isLoading
+					loadingText="Submitting..."
+					mt="40px"
+					bg="#71785f"
+					color="#f1f5ff"
+				>
 					Submitting...
 				</Button>
 			);
 		} else {
 			return (
-				<Button type="submit" colorScheme="blue" mt="40px">
+				<Button
+					type="submit"
+					mt="40px"
+					bg="#fff12e"
+					color="#27292d"
+					_hover={{ bg: '#f6cf2d' }}
+				>
 					Submit
 				</Button>
 			);
@@ -132,7 +145,7 @@ export default function Form() {
 
 	return (
 		<>
-			<div className="card" style={{ color: 'white' }}>
+			<div className="card">
 				<div className="heading">Sign-Up</div>
 				<form onSubmit={handleSubmit}>
 					<fieldset disabled={submitting}>
@@ -162,16 +175,24 @@ export default function Form() {
 							name="occupation"
 							onChange={handleChange}
 							value={formData.occupation}
+							defaultValue="default"
+							borderColor="whiteAlpha.400"
 						>
-							<option value="" disabled selected>
+							<option value="default" disabled>
 								Select an Occupation
 							</option>
 							{occupation.map((item, index) => (
 								<option key={index}>{item}</option>
 							))}
 						</Select>
-						<Select name="state" onChange={handleChange} value={formData.state}>
-							<option value="" disabled selected>
+						<Select
+							name="state"
+							onChange={handleChange}
+							value={formData.state}
+							defaultValue="default"
+							borderColor="whiteAlpha.400"
+						>
+							<option value="default" disabled>
 								Select a State
 							</option>
 							{state.map((item) => (

@@ -20,6 +20,7 @@
 
 form {
 	margin: 0 24px;
+	color: white;
 }
 
 fieldset {
@@ -31,11 +32,15 @@ fieldset {
 	min-width: 0;
 }
 
+option {
+	color: black;
+}
+
 button {
 	margin: 20px 24px 12px 0;
 	width: 100%;
 	height: 43px;
-	background: #4a96ff;
+
 	border-radius: 4px;
 	border: none;
 	color: white;
