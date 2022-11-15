@@ -61,7 +61,7 @@ export default function Form() {
 						email: formData.email,
 						password: formData.password,
 						occupation: formData.occupation,
-						state: formData.state,
+						/* state: formData.state, */
 					}),
 					headers: {
 						'Content-type': 'application/json',

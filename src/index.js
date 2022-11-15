@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+
 const theme = extendTheme({
 	styles: {
 		global: () => ({

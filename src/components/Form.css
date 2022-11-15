@@ -6,7 +6,7 @@
 	background-color: #27292d;
 	border-radius: 8px;
 	width: 463px;
-	height: 520px;
+	height: 550px;
 	/*left: 488px;
 	top: 284px; */
 	margin: auto;
@@ -33,7 +33,7 @@ fieldset {
 }
 
 option {
-	color: black;
+	color: white;
 }
 
 button {
