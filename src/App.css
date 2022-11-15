@@ -4,8 +4,5 @@ body {
 }
 
 .App {
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	display: grid; */
+	color: white;
 }

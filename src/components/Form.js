@@ -149,56 +149,71 @@ export default function Form() {
 				<div className="heading">Sign-Up</div>
 				<form onSubmit={handleSubmit}>
 					<fieldset disabled={submitting}>
-						<Input
-							name="name"
-							onChange={handleChange}
-							value={formData.name || ''}
-							placeholder="Full Name"
-							borderColor="whiteAlpha.400"
-						/>
-						<Input
-							name="email"
-							onChange={handleChange}
-							value={formData.email || ''}
-							placeholder="Email"
-							borderColor="whiteAlpha.400"
-						/>
-						<Input
-							name="password"
-							type="password"
-							onChange={handleChange}
-							value={formData.password || ''}
-							placeholder="Password"
-							borderColor="whiteAlpha.400"
-						/>
-						<Select
-							name="occupation"
-							onChange={handleChange}
-							value={formData.occupation}
-							defaultValue="default"
-							borderColor="whiteAlpha.400"
-						>
-							<option value="default" disabled>
-								Select an Occupation
-							</option>
-							{occupation.map((item, index) => (
-								<option key={index}>{item}</option>
-							))}
-						</Select>
-						<Select
-							name="state"
-							onChange={handleChange}
-							value={formData.state}
-							defaultValue="default"
-							borderColor="whiteAlpha.400"
-						>
-							<option value="default" disabled>
-								Select a State
-							</option>
-							{state.map((item) => (
-								<option key={item.abbreviation}>{item.name}</option>
-							))}
-						</Select>
+						<label>
+							Full Name
+							<Input
+								name="name"
+								onChange={handleChange}
+								value={formData.name || ''}
+								placeholder="Full Name"
+								borderColor="whiteAlpha.400"
+							/>
+						</label>
+						<label>
+							Email
+							<Input
+								name="email"
+								onChange={handleChange}
+								value={formData.email || ''}
+								placeholder="Email"
+								borderColor="whiteAlpha.400"
+							/>
+						</label>
+						<label>
+							Password
+							<Input
+								name="password"
+								type="password"
+								onChange={handleChange}
+								value={formData.password || ''}
+								placeholder="Password"
+								borderColor="whiteAlpha.400"
+							/>
+						</label>
+						<label>
+							Occupation
+							<Select
+								name="occupation"
+								onChange={handleChange}
+								value={formData.occupation}
+								defaultValue="default"
+								borderColor="whiteAlpha.400"
+							>
+								<option value="default" disabled>
+									Select an Occupation
+								</option>
+								{occupation.map((item, index) => (
+									<option key={index}>{item}</option>
+								))}
+							</Select>
+						</label>
+						<label>
+							State
+							<Select
+								name="state"
+								onChange={handleChange}
+								value={formData.state}
+								defaultValue="default"
+								borderColor="whiteAlpha.400"
+							>
+								<option value="default" disabled>
+									Select a State
+								</option>
+								{state.map((item) => (
+									<option key={item.abbreviation}>{item.name}</option>
+								))}
+							</Select>
+						</label>
 						<SubmitButton />
 					</fieldset>
 				</form>
