@@ -8,8 +8,8 @@ function formReducer(state, event) {
 			name: '',
 			email: '',
 			password: '',
-			occupation: 'default',
-			state: 'default',
+			occupation: '',
+			state: '',
 		};
 	}
 	return {
@@ -61,7 +61,7 @@ export default function Form() {
 						email: formData.email,
 						password: formData.password,
 						occupation: formData.occupation,
-						/* state: formData.state, */
+						state: formData.state,
 					}),
 					headers: {
 						'Content-type': 'application/json',
@@ -186,10 +186,10 @@ export default function Form() {
 								name="occupation"
 								onChange={handleChange}
 								value={formData.occupation}
-								defaultValue="default"
+								defaultValue=""
 								borderColor="whiteAlpha.400"
 							>
-								<option value="default" disabled>
+								<option value="" disabled>
 									Select an Occupation
 								</option>
 								{occupation.map((item, index) => (
@@ -203,10 +203,10 @@ export default function Form() {
 								name="state"
 								onChange={handleChange}
 								value={formData.state}
-								defaultValue="default"
+								defaultValue=""
 								borderColor="whiteAlpha.400"
 							>
-								<option value="default" disabled>
+								<option value="" disabled>
 									Select a State
 								</option>
 								{state.map((item) => (
